@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поведенческие признаки и базовые проверки</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000000;
+      font-family: 'Oswald', sans-serif;
+      color: white;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .page-title h1 {
+      font-size: 64px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      color: white;
+    }
+
+    .page-title h1 span {
+      color: #ff0000;
+      text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    }
+
+    .page-title p {
+      font-size: 22px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 15px;
+    }
+
+    .block {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      margin-bottom: 100px;
+    }
+
+    .block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .block-image {
+      flex: 1;
+    }
+
+    .block-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .block-text {
+      flex: 1;
+    }
+
+    .block-text h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #ff3333;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .block-text p {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+    }
+
+    .block-text ul {
+      list-style: none;
+    }
+
+    .block-text li {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .block-text li::before {
+      content: "•";
+      color: #ff0000;
+      font-size: 24px;
+      position: absolute;
+      left: 0;
+      top: -4px;
+    }
+
+    @media (max-width: 900px) {
+      .block, .block.reverse {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .block-image, .block-text {
+        width: 100%;
+      }
+
+      .page-title h1 {
+        font-size: 48px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 60px 25px;
+      }
+
+      .page-title h1 {
+        font-size: 36px;
+      }
+
+      .block-text h2 {
+        font-size: 32px;
+      }
+
+      .block-text p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="page-title">
+      <h1><span>ПОВЕДЕНЧЕСКИЙ</span> АНАЛИЗ</h1>
+      <p>Что это такое?</p>
+    </div>
+
+    <div class="block">
+      <div class="block-image">
+        <img src="img/photo9.jpg" alt="Поведенческий анализ">
+      </div>
+      <div class="block-text">
+        <h2>Что такое поведенческий анализ?</h2>
+        <p>Это технология активного мониторинга. В отличие от классических методов, поведенческий анализ не ждёт, когда вирус будет опознан по базе. Он наблюдает за действиями программ в реальном времени и оценивает их безопасность по поведенческим паттернам.</p>
+        <ul>
+          <li>Круглосуточный мониторинг в реальном времени</li>
+          <li>Не требует обновления сигнатур</li>
+          <li>Эффективен против новых угроз</li>
+          <li>Критически важен для защиты от программ-шифровальщиков</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block reverse">
+      <div class="block-image">
+        <img src="img/photo10.jpg" alt="ЧТО ОТСЛЕЖИВАЕТ ПОВЕДЕНЧЕСКИЙ АНАЛИЗ?">
+      </div>
+      <div class="block-text">
+        <h2>ЧТО ОТСЛЕЖИВАЕТ ПОВЕДЕНЧЕСКИЙ АНАЛИЗ?</h2>
+        <p>Анализируются не отдельные действия, а их последовательности. Одиночное обращение к файлу — норма. Массовое переименование тысяч документов за секунду — явный признак атаки. Система выявляет аномалии, характерные для вредоносной активности.</p>
+        <ul>
+          <li>Массовые изменения файлов</li>
+          <li>Попытки отключения защитного ПО</li>
+          <li>Несанкционированный доступ к паролям</li>
+          <li>Подозрительная сетевая активность</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-image">
+        <img src="img/photo11.jpg" alt="песочница">
+      </div>
+      <div class="block-text">
+        <h2>ТЕХНОЛОГИЯ ПЕСОЧНИЦЫ (SANDBOX)</h2>
+        <p>Один из самых надёжных методов. Подозрительный файл запускается в изолированной виртуальной среде, полностью имитирующей реальную систему. Вирус взаимодействует с "пустышкой", не имея доступа к вашим данным. Через несколько минут песочница выдаёт подробный отчёт.</p>
+        <ul>
+          <li>Абсолютная безопасность для системы</li>
+          <li>Детальный анализ всех действий программы</li>
+          <li>Требователен к ресурсам</li>
+          <li>Используется в профессиональных версиях антивирусов</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block reverse" style="margin-top: 80px;">
+      <div class="block-image">
+        <img src="img/photo12.webp" alt="ОГРАНИЧЕНИЯ МЕТОДА">
+      </div>
+      <div class="block-text">
+        <h2>ОГРАНИЧЕНИЯ МЕТОДА</h2>
+        <p>Поведенческий анализ — мощный, но не идеальный инструмент. Он требует значительных системных ресурсов, иногда ошибочно блокирует безопасные приложения и может быть обманут специально написанными, "тихими" вредоносными программами. Поэтому оптимальная стратегия — комбинация с классическим сигнатурным анализом.</p>
+        <ul>
+          <li>Повышенное потребление оперативной памяти</li>
+          <li>Риск ложных срабатываний</li>
+          <li>Некоторые вирусы умеют маскировать активность</li>
+          <li>Требует дополнительного обучения пользователя</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

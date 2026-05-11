@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поведенческие признаки и базовые проверки</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000000;
+      font-family: 'Oswald', sans-serif;
+      color: white;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .page-title h1 {
+      font-size: 64px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      color: white;
+    }
+
+    .page-title h1 span {
+      color: #ff0000;
+      text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    }
+
+    .page-title p {
+      font-size: 22px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 15px;
+    }
+
+    .block {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      margin-bottom: 100px;
+    }
+
+    .block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .block-image {
+      flex: 1;
+    }
+
+    .block-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .block-text {
+      flex: 1;
+    }
+
+    .block-text h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #ff3333;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .block-text p {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+    }
+
+    .block-text ul {
+      list-style: none;
+    }
+
+    .block-text li {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .block-text li::before {
+      content: "•";
+      color: #ff0000;
+      font-size: 24px;
+      position: absolute;
+      left: 0;
+      top: -4px;
+    }
+
+    @media (max-width: 900px) {
+      .block, .block.reverse {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .block-image, .block-text {
+        width: 100%;
+      }
+
+      .page-title h1 {
+        font-size: 48px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 60px 25px;
+      }
+
+      .page-title h1 {
+        font-size: 36px;
+      }
+
+      .block-text h2 {
+        font-size: 32px;
+      }
+
+      .block-text p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="page-title">
+      <h1><span>ПОВЕДЕНЧЕСКИЕ</span> ПРИЗНАКИ</h1>
+      <p>И базовые проверки для выявления угроз</p>
+    </div>
+
+    <div class="block">
+      <div class="block-image">
+        <img src="img/photo1.png" alt="Поведенческие признаки">
+      </div>
+      <div class="block-text">
+        <h2>ТОРМОЗА И ЛАГИ</h2>
+        <p>Компьютер внезапно начинает «тупить» без видимой причины. Это первый звоночек.</p>
+        <ul>
+          <li>Программы открываются по 10–20 секунд</li>
+          <li>Курсор зависает, видео тормозит</li>
+          <li>Система долго загружается</li>
+          <li>В диспетчере задач неизвестные процессы</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block reverse">
+      <div class="block-image">
+        <img src="img/photo2.jpg" alt="Странные окна">
+      </div>
+      <div class="block-text">
+        <h2>СТРАННЫЕ ОКНА</h2>
+        <p>Всплывающая реклама, незнакомые уведомления, сайты открываются сами.</p>
+        <ul>
+          <li>Реклама казино и ставок на рабочем столе</li>
+          <li>Браузер открывает вкладки без твоего ведома</li>
+          <li>Антивирус отключился сам</li>
+          <li>Расширения, которые ты не ставил</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-image">
+        <img src="img/photo3.jpg" alt="Файлы и пароли">
+      </div>
+      <div class="block-text">
+        <h2>ФАЙЛЫ И ПАРОЛИ</h2>
+        <p>Пропадают документы, пароли перестают подходить, фото не открываются.</p>
+        <ul>
+          <li>Файлы превратились в ярлыки</li>
+          <li>Вместо документов — странные расширения .locked, .crypted</li>
+          <li>Пароль от почты/соцсетей не подходит</li>
+          <li>Друзья жалуются на спам от тебя</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block reverse" style="margin-top: 80px;">
+      <div class="block-image">
+        <img src="img/photo4.jpg" alt="Диспетчер задач">
+      </div>
+      <div class="block-text">
+        <h2>БАЗОВЫЕ ПРОВЕРКИ</h2>
+        <p>Три действия, которые нужно сделать прямо сейчас.</p>
+        <ul>
+          <li><strong style="color:#ff6666;">Ctrl + Shift + Esc</strong> — открой диспетчер задач, посмотри странные процессы</li>
+          <li><strong style="color:#ff6666;">Проверка автозагрузки</strong> — всё лишнее отключи</li>
+          <li><strong style="color:#ff6666;">Быстрый скан</strong> — любой антивирус, хотя бы раз в месяц</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

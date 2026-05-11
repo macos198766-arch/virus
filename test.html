@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тест на уровень защиты</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/test-styles.css">
+</head>
+<body>
+  <section class="test-page">
+    <div class="test-container">
+      <div class="test-header">
+        <h1><span>КИБЕР</span>ТЕСТ</h1>
+        <p>Узнай свой уровень цифровой защиты</p>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div id="questionsContainer">
+        <div class="question active" id="q1">
+          <h2>Вопрос 1/5</h2>
+          <div class="question-counter">СТРАННОЕ ПОВЕДЕНИЕ</div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="q1" id="q1a" value="3">
+              <label for="q1a">Компьютер работает идеально, никогда не тормозит</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q1" id="q1b" value="2">
+              <label for="q1b">Иногда бывают небольшие лаги, но быстро проходят</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q1" id="q1c" value="1">
+              <label for="q1c">Регулярно зависает, странные окна вылетают</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q1" id="q1d" value="0">
+              <label for="q1d">Открываются сайты сами, реклама везде, всё тормозит</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question" id="q2">
+          <h2>Вопрос 2/5</h2>
+          <div class="question-counter">АНТИВИРУС</div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="q2" id="q2a" value="3">
+              <label for="q2a">Лицензия обновляется, сканирование раз в неделю</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q2" id="q2b" value="2">
+              <label for="q2b">Стоит бесплатный, обновляется когда не лень</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q2" id="q2c" value="1">
+              <label for="q2c">Был когда-то, но кончился/сломался</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q2" id="q2d" value="0">
+              <label for="q2d">Нет антивируса, он только тормозит</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question" id="q3">
+          <h2>Вопрос 3/5</h2>
+          <div class="question-counter">ПАРОЛИ</div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="q3" id="q3a" value="3">
+              <label for="q3a">Сложные пароли, менеджер, двухфакторка</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q3" id="q3b" value="2">
+              <label for="q3b">Разные пароли, но простые, записываю</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q3" id="q3c" value="1">
+              <label for="q3c">Один пароль на всё, но сложный</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q3" id="q3d" value="0">
+              <label for="q3d">123456, qwerty, дата рождения</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question" id="q4">
+          <h2>Вопрос 4/5</h2>
+          <div class="question-counter">ФИШИНГ</div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="q4" id="q4a" value="3">
+              <label for="q4a">Всегда проверяю ссылки, смотрю на адрес сайта</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q4" id="q4b" value="2">
+              <label for="q4b">Иногда проверяю, но могу кликнуть</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q4" id="q4c" value="1">
+              <label for="q4c">Кликаю на всё, антивирус надеется</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q4" id="q4d" value="0">
+              <label for="q4d">Я даже не знаю, что это такое</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question" id="q5">
+          <h2>Вопрос 5/5</h2>
+          <div class="question-counter">ОБНОВЛЕНИЯ</div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="q5" id="q5a" value="3">
+              <label for="q5a">Обновляю сразу, как выходят</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q5" id="q5b" value="2">
+              <label for="q5b">Обновляю, когда напомнят</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q5" id="q5c" value="1">
+              <label for="q5c">Откладываю на потом</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q5" id="q5d" value="0">
+              <label for="q5d">Отключил обновления, бесят</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navigation">
+        <button class="nav-btn" id="prevBtn" disabled>← Назад</button>
+        <button class="nav-btn" id="nextBtn">Далее →</button>
+      </div>
+
+      <div class="result-block" id="resultBlock">
+        <div class="result-title">ВАШ УРОВЕНЬ</div>
+        <div class="result-score" id="resultScore">0</div>
+        <div class="result-level" id="resultLevel">...</div>
+        <div class="result-description" id="resultDesc">...</div>
+        <button class="restart-btn" id="restartBtn">Пройти заново</button>
+      </div>
+    </div>
+  </section>
+  <script src="scripts/test-scripts.js"></script>
+</body>
+</html>

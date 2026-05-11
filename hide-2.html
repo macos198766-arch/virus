@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стандартные антивирусные сканеры</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000000;
+      font-family: 'Oswald', sans-serif;
+      color: white;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .page-title h1 {
+      font-size: 64px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      color: white;
+    }
+
+    .page-title h1 span {
+      color: #ff0000;
+      text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    }
+
+    .page-title p {
+      font-size: 22px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 15px;
+    }
+
+    .block {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      margin-bottom: 100px;
+    }
+
+    .block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .block-image {
+      flex: 1;
+    }
+
+    .block-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .block-text {
+      flex: 1;
+    }
+
+    .block-text h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #ff3333;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .block-text p {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+    }
+
+    .block-text ul {
+      list-style: none;
+    }
+
+    .block-text li {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .block-text li::before {
+      content: "•";
+      color: #ff0000;
+      font-size: 24px;
+      position: absolute;
+      left: 0;
+      top: -4px;
+    }
+
+    @media (max-width: 900px) {
+      .block, .block.reverse {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .block-image, .block-text {
+        width: 100%;
+      }
+
+      .page-title h1 {
+        font-size: 48px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 60px 25px;
+      }
+
+      .page-title h1 {
+        font-size: 36px;
+      }
+
+      .block-text h2 {
+        font-size: 32px;
+      }
+
+      .block-text p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="page-title">
+      <h1><span>АНТИВИРУСНЫЕ</span> СКАНЕРЫ</h1>
+      <p>и что это такое</p>
+    </div>
+
+    <div class="block">
+      <div class="block-image">
+        <img src="img/photo5.png" alt="сигнатурный анализ">
+      </div>
+      <div class="block-text">
+        <h2>СИГНАТУРНЫЙ АНАЛИЗ</h2>
+        <p>Это основа работы любого антивируса. Программа сверяет файлы со своей базой данных известных угроз. Если находится совпадение — файл помещается в карантин или удаляется. Работает по принципу списка разыскиваемых: есть совпадение — есть вирус.</p>
+        <ul>
+          <li>Требует регулярного обновления баз</li>
+          <li>Неэффективен против новых, неизвестных вирусов</li>
+          <li>Неэффективен против новых, неизвестных вирусов</li>
+          <li>Высокая скорость работы</li>
+          <li>Обнаруживает до 90% классических угроз</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block reverse">
+      <div class="block-image">
+        <img src="img/photo6.jpg" alt="эвристический анализ">
+      </div>
+      <div class="block-text">
+        <h2>ЭВРИСТИЧЕСКИЙ АНАЛИЗ</h2>
+        <p>Более продвинутый метод. Эвристика не ждёт совпадения с базой — она анализирует поведение файла. Если программа пытается открыть сетевые порты, изменить системные файлы или обратиться к реестру — это подозрительно. Даже если самого вируса ещё нет в базах.</p>
+        <ul>
+          <li>Обнаруживает новые, неизвестные угрозы</li>
+          <li>Возможны ложные срабатывания</li>
+          <li>Требует больше вычислительных ресурсов</li>
+          <li>Максимальная эффективность в паре с сигнатурным анализом</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-image">
+        <img src="img/photo7.png" alt="полное сканирование">
+      </div>
+      <div class="block-text">
+        <h2>ПОЛНОЕ СКАНИРОВАНИЕ</h2>
+        <p>Комплексная проверка всей системы. Антивирус последовательно проверяет жёсткие диски, оперативную память, загрузочные сектора, автозагрузку, почтовые базы и временные файлы. Процесс длительный, но именно он даёт максимальную гарантию чистоты системы.</p>
+        <ul>
+          <li>Проверка всех без исключения областей</li>
+          <li>Длительность от 1 до 3 часов</li>
+          <li>Рекомендуется проводить ежемесячно</li>
+          <li>После завершения требуется перезагрузка</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block reverse" style="margin-top: 80px;">
+      <div class="block-image">
+        <img src="img/photo8.jpg" alt="быстрое сканирование">
+      </div>
+      <div class="block-text">
+        <h2>БЫСТРОЕ СКАНИРОВАНИЕ</h2>
+        <p>Экспресс-проверка для повседневного использования. Сканируются наиболее уязвимые зоны: оперативная память, автозагрузка, системные процессы и временные папки. Занимает 5–10 минут и не мешает работе за компьютером..</p>
+        <ul>
+          <li>Оптимально для ежедневной проверки
+          <li>Минимальная нагрузка на систему</li>
+          <li>Выявляет около 80% актуальных угроз</li>
+          <li>Не заменяет полное сканирование</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
