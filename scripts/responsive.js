@@ -200,3 +200,6 @@ document.addEventListener('DOMContentLoaded', fixSliderOverflowOnMobile);
 window.addEventListener('resize', function() {
     setTimeout(fixSliderOverflowOnMobile, 100);
 });
+
+
+
