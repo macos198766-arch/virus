@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Компьютерные вирусы</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+
     <link
         href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
@@ -14,6 +16,7 @@
 
 <body>
     <header>
+        <div class="black">
         <div class="header-container">
             <div class="logo-block">
                 <a href="#" class="logo">
@@ -27,7 +30,18 @@
                     <li><a href="#hide">Обнаружение</a></li>
                 </ul>
             </nav>
+            <div class="mobile-nav-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+        <ul class="mobile-nav-menu" id="mobileMenu">
+            <li><a href="#slider">История</a></li>
+            <li><a href="#protection-sec">Защита</a></li>
+            <li><a href="#hide">Обнаружение</a></li>
+            <li><a href="test.html">Тест</a></li>
+        </ul>
     </header>
     <section class="hero">
         <div class="hero-content">
@@ -140,7 +154,7 @@
                 </div>
             </div>
     </section>
-
+</div>
     <section id="protection-sec" class="protection-section">
         <div class="red-mist"></div>
         <div class="red-mist-2"></div>
@@ -217,7 +231,9 @@
         </div>
     </section>
     <script src="scripts/app.js"></script>
+    <script src="scripts/responsive.js"></script>
     <script src="libs/swiper/swiper-bundle.min.js"></script>
+
 </body>
 
 </html>
